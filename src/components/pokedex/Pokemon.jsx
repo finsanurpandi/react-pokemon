@@ -21,7 +21,7 @@ class Pokemon extends Component {
 
 	getAllPokemonData(){
 		$.ajax({
-			url: this.props.pokeApi+'api/v2/pokemon/'+this.state.id,
+			url: this.props.pokeApi+'/api/v2/pokemon/'+this.state.id,
 			dataType: 'json',
 			cache: false,
 			success: function(data){
@@ -47,7 +47,7 @@ class Pokemon extends Component {
 
 	getEvolve(){
 		$.ajax({
-			url: this.props.pokeApi+'api/v2/evolution-chain/'+this.state.id,
+			url: this.props.pokeApi+'/api/v2/evolution-chain/'+this.state.id,
 			dataType: 'json',
 			cache: false,
 			success: function(data){
@@ -138,7 +138,7 @@ Pokemon.propTypes = {
 };
 
 Pokemon.defaultProps = {
-  pokeApi: 'http://pokeapi.salestock.net:8000/',
+  pokeApi: 'YOUR_API_KEY',
 }
 
 export default Pokemon;

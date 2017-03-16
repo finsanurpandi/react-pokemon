@@ -24,7 +24,7 @@ class Pokedex extends Component {
 
   getAllPokemonData(){
     $.ajax({
-      url: this.props.pokeApi+'api/v2/pokemon?limit='+this.state.perPage,
+      url: this.props.pokeApi+'/api/v2/pokemon?limit='+this.state.perPage,
       dataType: 'json',
       cache: false,
       success: function(data){
@@ -173,7 +173,7 @@ Pokedex.propTypes = {
 };
 
 Pokedex.defaultProps = {
-  pokeApi: 'http://pokeapi.salestock.net:8000/',
+  pokeApi: 'YOUR_API_KEY',
 }
 
 export default Pokedex;
